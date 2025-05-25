@@ -1,0 +1,17 @@
+{
+  "name": "deploybot-platform",
+  "version": "1.0.0",
+  "description": "Heroku alternative for bot deployment",
+  "scripts": {
+    "start": "cd server && node server.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "cacheDirectories": [
+    "client/node_modules",
+    "server/node_modules"
+  ],
+  "engines": {
+    "node": "18.x",
+    "npm": "9.x"
+  }
+}
